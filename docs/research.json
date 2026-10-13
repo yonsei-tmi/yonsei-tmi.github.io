@@ -50,7 +50,7 @@
     },
     {
       "id": "physics-based-system-development",
-      "title": "Physics-based System Development",
+      "title": "Imaging System",
       "description": "We develop CT imaging systems by jointly designing acquisition geometry, calibration, and image reconstruction. Our work includes carbon-nanotube-based multisource architectures and compact C-arm CT prototypes, with an emphasis on expanding anatomical coverage and making effective use of measured projections. From source–detector alignment and detector correction to volume fusion, we integrate imaging physics and computational methods and evaluate complete imaging pipelines through simulation and prototype experiments.",
       "tasks": [
         "CT reconstruction",
