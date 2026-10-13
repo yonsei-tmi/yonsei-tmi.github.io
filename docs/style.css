@@ -94,7 +94,7 @@ html{scrollbar-gutter:stable}@supports not (scrollbar-gutter:stable){html{overfl
 @media(max-width:720px){.home-main>.intro{padding-bottom:24px}}
 
 /* Plain professor contacts and consistent researcher typography. */
-.profile .contact-label,.researcher-group .interest-label{color:var(--muted)}
+.profile .contact-label,.researcher-group .interest-label{color:var(--ink);font-weight:600}
 .researcher-group .member-email a{font-size:inherit}
 .researcher-group .person .member-scholar .scholar-link{font-size:14px}
 @media(max-width:720px){.researcher-group .person .member-scholar .scholar-link{font-size:15px}}
