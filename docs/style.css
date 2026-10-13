@@ -87,3 +87,8 @@ html{scrollbar-gutter:stable}@supports not (scrollbar-gutter:stable){html{overfl
 
 /* Even vertical spacing in professor information. */
 .profile>div{display:flex;flex-direction:column;align-items:flex-start;gap:16px}.profile>div>p,.profile>div>h2{margin:0}.profile-links .scholar-link,.profile-links .contact-trigger{min-height:28px}
+
+/* Bring the home introduction and Recent News slightly closer. */
+.home-main>.intro{padding-bottom:32px}
+.home-main>.intro+.section{padding-top:32px}
+@media(max-width:720px){.home-main>.intro{padding-bottom:24px}}
