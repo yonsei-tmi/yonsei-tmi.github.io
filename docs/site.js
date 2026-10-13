@@ -138,12 +138,10 @@ document.querySelectorAll('[data-paper-pages]').forEach(card => {
   const count = card.querySelector('.paper-page-count');
   let page = 0;
   function showPage(index) {
-    page = Math.max(0, Math.min(pages.length - 1, index));
+    page = (index + pages.length) % pages.length;
     image.src = pages[page];
     image.alt = `${card.getAttribute('aria-label')} - page ${page + 1}`;
     count.textContent = `${page + 1} / ${pages.length}`;
-    previous.disabled = page === 0;
-    next.disabled = page === pages.length - 1;
   }
   previous.addEventListener('click', () => showPage(page - 1));
   next.addEventListener('click', () => showPage(page + 1));
