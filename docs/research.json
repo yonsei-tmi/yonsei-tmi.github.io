@@ -3,7 +3,7 @@
     {
       "id": "image-enhancement",
       "title": "Image Enhancement",
-      "description": "We develop computational and learning-based methods to recover informative images from noisy, incomplete, or artifact-corrupted measurements. By combining imaging physics with neural representations and generative priors, we study restoration and reconstruction across projection and image domains. Our goal is to improve image quality while preserving anatomical structure, natural texture, and information relevant to downstream tasks.",
+      "description": "We develop deep learning-based approaches to recover high-quality images from noisy measurements or degraded images. Our goal is to enhance image quality while preserving the underlying textures and structures by adapting recent computer vision techniques to the specific tasks. Building on this, we aim to extend our research to enable more reliable image interpretation and provide feasible solutions to real-world problems.",
       "tasks": [
         "CT noise and streak/metal artifacts reduction",
         "Super resolution",
