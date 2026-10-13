@@ -79,3 +79,6 @@
 .profile{grid-template-columns:200px minmax(0,1fr);gap:40px;align-items:start}.profile>img{width:200px}.profile,.career-section{width:min(900px,100%);margin-left:auto;margin-right:auto}@media(max-width:720px){.profile,.career-section{width:100%}.profile{grid-template-columns:1fr;gap:24px}.profile>img{width:160px}}
 
 .profile .eyebrow,.profile>div>p,.career-section .affiliations{font-size:15px}@media(max-width:720px){.profile .eyebrow,.profile>div>p,.career-section .affiliations{font-size:14px}}
+
+/* Reserve scrollbar space so shared header stays fixed across page lengths. */
+html{scrollbar-gutter:stable}@supports not (scrollbar-gutter:stable){html{overflow-y:scroll}}
