@@ -78,9 +78,10 @@
       "title": "Image Quality Evaluation",
       "description": "We investigate more clinically meaningful evaluation metrics in real practice to overcome the methodological representability limitations of widely used metrics. We pursue to design an image quality assessment capable of effectively evaluating a specific task, and to conduct a reader study from radiologists to further clinical feasibility.",
       "tasks": [
-        "Human perception and no-reference quality assessment",
+        "No-reference image quality assessement",
         "MTF and NPS estimation",
-        "Human or mathematical model observers",
+        "Human perception evaluation",
+        "Model observer",
         "Task-based image quality assessment"
       ],
       "papers": [
