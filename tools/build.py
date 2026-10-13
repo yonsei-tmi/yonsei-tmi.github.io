@@ -12,7 +12,12 @@ def page(filename,title,content,active,sub='',source=None):
     if filename == "index.html":
         output = output.replace('<main id="main" class="wrap">', '<main id="main" class="home-main">')
     (OUT/filename).write_text(output,encoding='utf-8')
-def tabs(items,current):return '<nav class="subnav" aria-label="Section navigation">'+''.join(f'<a href="{f}"'+(' aria-current="page"' if f==current else '')+f'>{name}</a>' for name,f in items)+'</nav>'
+def tabs(items,current):
+    links=[]
+    for name,f in items:
+        url=f+'?v=publications' if f=='patents.html' else f
+        links.append(f'<a href="{url}"'+(' aria-current="page"' if f==current else '')+f'>{name}</a>')
+    return '<nav class="subnav" aria-label="Section navigation">'+''.join(links)+'</nav>'
 PEOPLE=[('Professor','people.html'),('Researchers','researchers.html'),('Alumni','alumni.html')]
 PUBS=[('Journal','journal.html'),('Conference','conference.html'),('Patent','patents.html')]
 areas=[('Real-world imaging systems','We study medical images as outputs of physical acquisition systems.',['Imaging physics & geometry','Scanners, protocols & dose','Artifacts & acquisition variability','Real patient data']),('Clinical intelligence under image quality variation','We develop restoration and diagnostic AI that is robust in the real world.',['Artifact reduction & restoration','Image quality assessment','Uncertainty modeling','Downstream task performance']),('Evidence-driven translation','We bridge AI development and real clinical impact.',['Foundation data infrastructure','Task-based & reader-aligned evaluation','Clinical workflow integration','MVP, IP, and startup-driven translation'])]
