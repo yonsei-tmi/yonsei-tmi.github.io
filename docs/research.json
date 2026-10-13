@@ -5,11 +5,10 @@
       "title": "Image Enhancement",
       "description": "We develop deep learning-based approaches to recover high-quality images from noisy measurements or degraded images. Our goal is to enhance image quality while preserving the underlying textures and structures by adapting recent computer vision techniques to the specific tasks. Building on this, we aim to extend our research to enable more reliable image interpretation and provide feasible solutions to real-world problems.",
       "tasks": [
-        "CT noise and streak/metal artifacts reduction",
+        "Denoising and artifact correction",
         "Super resolution",
-        "Diffusion model/implicit neural representation development",
-        "Inverse problem solving",
-        "Dual-domain and self-supervised learning"
+        "Generative models",
+        "Unsupervised and self-supervised learning"
       ],
       "papers": [
         {
