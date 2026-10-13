@@ -35,7 +35,7 @@
       "name": "Hanjoo Jang",
       "details": [
         "Postdoctoral Scholar",
-        "Image quality evaluation of medical images",
+        "Image quality evaluation",
         "imhanjoo@naver.com"
       ],
       "image": "assets/hanjoo-jang-original.jpg",
@@ -50,7 +50,7 @@
       "name": "Seongjun Kim",
       "details": [
         "Postdoctoral Scholar",
-        "Deep learning applications for low-dose CT and sparse-view CT",
+        "Image enhancement",
         "2sjkim@gmail.com"
       ],
       "image": "assets/seongjun-kim-original.jpg",
@@ -66,7 +66,7 @@
       "name": "Junhyun Ahn",
       "details": [
         "M.S./Ph.D. Student",
-        "Deep learning applications for metal artifact reduction",
+        "Metal artifact reduction",
         "tony1124@naver.com"
       ],
       "image": "assets/junhyun-ahn-original.jpg",
@@ -81,7 +81,7 @@
       "name": "Minwoo Yu",
       "details": [
         "Ph.D. Student",
-        "Super-resolution of CT images with deep learning",
+        "Super resolution",
         "ymw9754@gmail.com"
       ],
       "image": "assets/minwoo-yu-original.jpg",
@@ -113,7 +113,7 @@
       "name": "Hojin Jung",
       "details": [
         "M.S./Ph.D. Student",
-        "Generative models for CT image enhancement and system engineering",
+        "Generative model and system engineering",
         "wjdghwls98@gmail.com"
       ],
       "image": "assets/ca2e55dbbb702be1.png",
@@ -127,7 +127,7 @@
       "name": "Yoonha Eo",
       "details": [
         "M.S./Ph.D. Student",
-        "Diagnostic AI for medical imaging",
+        "Diagnostic AI",
         "yoonhaeo@yonsei.ac.kr"
       ],
       "image": "assets/9dfb85edf8ee5888.png",
@@ -141,7 +141,7 @@
       "name": "Jaehong Ahn",
       "details": [
         "M.S./Ph.D. Student",
-        "AI for super resolution in medical images",
+        "Super resolution",
         "ppoyazero@naver.com"
       ],
       "image": "assets/c080d4cbb6d384b2.png",
@@ -155,7 +155,7 @@
       "name": "Sihwan Kim",
       "details": [
         "Ph.D. Student",
-        "AI for Dental panoramic diagnosis",
+        "Dental panoramic diagnosis",
         "shkim1018@yonsei.ac.kr"
       ],
       "image": "assets/7fde56635dc9cbc0.png",
@@ -170,7 +170,7 @@
       "name": "Nayeon Park",
       "details": [
         "M.S./Ph.D. Student",
-        "AI for sparse view CT",
+        "Sparse-view CT",
         "naaayeon017@gmail.com"
       ],
       "image": "assets/93e58a0ee2d8b422.png",
@@ -184,7 +184,7 @@
       "name": "Minyeong Kim",
       "details": [
         "M.S./Ph.D. Student",
-        "AI for patient specific CT denoising",
+        "Patient-specific CT denoising",
         "doyee7726@naver.com"
       ],
       "image": "assets/11cb746ca1b5b9f1.png",
@@ -198,7 +198,7 @@
       "name": "Kyungseo Kwon",
       "details": [
         "M.S./Ph.D. Student",
-        "Deep learning applications for metal artifact reduction",
+        "Metal artifact reduction",
         "wyrtrtywet@yonsei.ac.kr"
       ],
       "image": "assets/bece4167c1d3d7e3.png",
@@ -212,7 +212,7 @@
       "name": "Seungjun Lee",
       "details": [
         "M.S./Ph.D. Student",
-        "AI for medical imaging, robust vision systems",
+        "Robust vision system",
         "happyjunlee@gmail.com"
       ],
       "image": "assets/d1a7d6a8cae79f85.png",
@@ -226,7 +226,7 @@
       "name": "Hwanhee Cho",
       "details": [
         "M.S./Ph.D. Student",
-        "AI for structure aware CT denoising",
+        "Structure-aware CT denoising",
         "wh020627@gmail.com"
       ],
       "image": null,
@@ -240,7 +240,7 @@
       "name": "Subin Park",
       "details": [
         "M.S. Student",
-        "AI for dental panoramic diagnosis",
+        "Dental panoramic diagnosis",
         "subinp0507@gmail.com"
       ],
       "image": "assets/7dedb0f54a241fcf.png",
@@ -255,7 +255,7 @@
       "name": "Sunggyu Kim",
       "details": [
         "M.S. Student",
-        "AI for battery inspection image processing",
+        "Battery inspection image processing",
         "library8882@gmail.com"
       ],
       "image": "assets/2bd2bcf2364f49a1.png",
