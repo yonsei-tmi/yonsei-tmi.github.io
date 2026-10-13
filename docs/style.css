@@ -137,3 +137,7 @@ html{scrollbar-gutter:stable}@supports not (scrollbar-gutter:stable){html{overfl
 
 /* Research descriptions use regular weight. */
 .research-topic-description{font-weight:400}
+
+/* Selected Papers matches Latest Papers at every screen width. */
+.research-topics .research-paper-venue{font-size:13px}
+.research-topics .research-paper-info h4{font-size:15px}
