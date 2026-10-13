@@ -3,7 +3,7 @@
     {
       "id": "image-enhancement",
       "title": "Image Enhancement",
-      "description": "We develop deep learning-based approaches to recover high-quality images from noisy measurements or degraded images. Our goal is to enhance image quality while preserving the underlying textures and structures by adapting recent computer vision techniques to the specific tasks. Building on this, we aim to extend our research to enable more reliable image interpretation and provide feasible solutions to real-world problems.",
+      "description": "We develop deep learning-based approaches to recover high-quality images from noisy measurements or degraded images. Our goal is to enhance image quality while preserving the underlying textures and structures by adapting recent computer vision techniques to the specific tasks. Building on this work, we aim to extend our research to enable more reliable image interpretation and provide feasible solutions to real-world problems.",
       "tasks": [
         "Denoising and artifact correction",
         "Super resolution",
