@@ -115,3 +115,6 @@ html{scrollbar-gutter:stable}@supports not (scrollbar-gutter:stable){html{overfl
 /* Match professor Scholar link to affiliation and contact text. */
 .profile .profile-links .scholar-link{font-size:15px}
 @media(max-width:720px){.profile .profile-links .scholar-link{font-size:14px}}
+
+/* Researcher emails remain blue without a mail link. */
+.member-email-text{color:var(--blue);overflow-wrap:anywhere}
