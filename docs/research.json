@@ -29,8 +29,9 @@
       "title": "Trustworthy AI",
       "description": "We conduct fundamental research to determine how reliable AI model is in bridging the gap between its prediction and ground truth. We assess model confidence based on uncertainty estimation and control the use of learned information and the measurement knowledge. Our goal is to establish AI model that can maintain meaningful information without hallucination.",
       "tasks": [
-        "Uncertainty quantification and reliability evaluation",
-        "Anatomical fidelity and hallucination assessment"
+        "Uncertainty estimation",
+        "AI model's reliability quantification",
+        "Hallucination assessment"
       ],
       "papers": []
     },
