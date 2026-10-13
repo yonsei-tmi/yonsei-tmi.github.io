@@ -76,7 +76,7 @@
     {
       "id": "image-quality-evaluation",
       "title": "Image Quality Evaluation",
-      "description": "We quantify image quality through physical measurements, task performance, and human perception. Our methods characterize spatial resolution and noise using the modulation transfer function (MTF) and noise power spectrum (NPS), while model observers assess how well images support signal detection and discrimination. We also investigate learning-based, no-reference quality assessment aligned with radiologist judgments, providing complementary tools to evaluate imaging systems, acquisition protocols, and reconstruction or enhancement algorithms.",
+      "description": "We investigate more clinically meaningful evaluation metrics in real practice to overcome the methodological representability limitations of widely used metrics. We pursue to design an image quality assessment capable of effectively evaluating a specific task, and to conduct a reader study from radiologists to further clinical feasibility.",
       "tasks": [
         "Human perception and no-reference quality assessment",
         "MTF and NPS estimation",
