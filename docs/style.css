@@ -102,3 +102,7 @@ html{scrollbar-gutter:stable}@supports not (scrollbar-gutter:stable){html{overfl
 /* Match Research task and paper typography to publication titles. */
 .research-topics .research-label,.research-topics .research-task-list,.research-topics .research-paper-venue,.research-topics .research-paper-info h4{font-size:15px}
 @media(max-width:720px){.research-topics .research-label,.research-topics .research-task-list,.research-topics .research-paper-venue,.research-topics .research-paper-info h4{font-size:14px}}
+
+/* Journal titles are the paper links, with continuous hover underlines. */
+.publication h3 .publication-title-link{color:inherit;font-size:inherit;font-weight:inherit;text-decoration:none;text-decoration-skip-ink:none;text-underline-offset:3px;transition:color .15s ease}
+.publication h3 .publication-title-link:hover,.publication h3 .publication-title-link:focus-visible{color:var(--accent);text-decoration:underline;text-decoration-skip-ink:none}

@@ -2,7 +2,6 @@
 (function (root) {
   'use strict';
   const escape = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-  const clip = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m21.4 11.6-9.2 9.2a6 6 0 0 1-8.5-8.5l10-10a4 4 0 0 1 5.7 5.7l-10 10a2 2 0 0 1-2.8-2.8l9.2-9.2"/></svg>';
   function safeUrl(url) {
     try { const parsed = new URL(url); return ['https:', 'http:'].includes(parsed.protocol) ? parsed.href : ''; }
     catch { return ''; }
@@ -21,12 +20,12 @@
       venue = venue.replaceAll(escape(label), '<span class="publication-distinction">' + escape(label) + '</span>');
     }
     const url = safeUrl(paper.url);
-    const link = url ? ' <a class="publication-link" href="' + escape(url) + '" target="_blank" rel="noopener noreferrer" aria-label="Open paper: ' + escape(paper.title) + '">' + clip + '<span>Link</span></a>' : '';
+    const title = url ? '<a class="publication-title-link" href="' + escape(url) + '" target="_blank" rel="noopener noreferrer">' + escape(paper.title) + '</a>' : escape(paper.title);
     const otherLinks = (paper.links || []).map(link => {
       const url = safeUrl(link.url);
       return url ? '<a href="' + escape(url) + '">' + escape(link.text) + '</a>' : '';
     }).filter(Boolean).join(' ');
-    return '<article class="publication"><h3>' + prefix + escape(paper.title) + link + '</h3><p>' + escape(paper.authors) + '</p><p class="venue">' + venue + '</p>' + (otherLinks ? '<p class="paper-links">' + otherLinks + '</p>' : '') + '</article>';
+    return '<article class="publication"><h3>' + prefix + title + '</h3><p>' + escape(paper.authors) + '</p><p class="venue">' + venue + '</p>' + (otherLinks ? '<p class="paper-links">' + otherLinks + '</p>' : '') + '</article>';
   }
   function news(paper) {
     const date = /^\d{4}-(?:0[1-9]|1[0-2])(?:-\d{2})?$/.test(paper.news_date || '') ? paper.news_date : '';
