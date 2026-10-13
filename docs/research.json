@@ -51,11 +51,12 @@
     {
       "id": "physics-based-system-development",
       "title": "Imaging System",
-      "description": "We design newly and highly versatile CT imaging systems by jointly implementing complicated acquisition geometry, calibration, and image reconstruction. Our research focus on developing fast and memory-efficient physics-based imaging system methods applicable to real industrial CT.",
+      "description": "We design highly versatile new CT imaging systems by jointly implementing complex acquisition geometry, calibration, and image reconstruction. We are studying an efficient reconstruction algorithm that can increase scanning coverage, even within the constraints of limited spaces. Our goal is to develop fast, memory-efficient methods for prototype imaging system applicable to real industrial CT.",
       "tasks": [
-        "CT reconstruction",
-        "Multi-source CT system development",
-        "Geometric calibration"
+        "2D/3D image reconstruction",
+        "Geometry calibration",
+        "Multi-source CT system",
+        "Field of view extension"
       ],
       "papers": [
         {
