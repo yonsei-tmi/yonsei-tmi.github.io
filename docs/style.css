@@ -130,3 +130,6 @@ html{scrollbar-gutter:stable}@supports not (scrollbar-gutter:stable){html{overfl
 /* Match topic headings to the People section tabs. */
 .research-topic-heading{gap:12px}
 .research-topic-heading h2,.research-topic-number,.research-topic-separator{font-size:20px;font-weight:700;color:var(--accent)}
+
+/* Introductory copy matches the research topic heading size. */
+.research-topic-description,.home-main .intro-copy{font-size:20px}
