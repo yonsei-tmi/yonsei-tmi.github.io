@@ -118,3 +118,7 @@ html{scrollbar-gutter:stable}@supports not (scrollbar-gutter:stable){html{overfl
 
 /* Researcher emails remain blue without a mail link. */
 .member-email-text{color:var(--blue);overflow-wrap:anywhere}
+
+/* Alumni contact and career text. */
+.person .current-label{color:var(--ink);font-weight:600}
+.person .alumni-degree{color:var(--muted)}
