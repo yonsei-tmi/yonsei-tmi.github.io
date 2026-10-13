@@ -20,7 +20,7 @@
 
 .location-content{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}.location-info h3{font-size:21px}.location-info p{color:var(--muted);font-size:15px;line-height:1.8}.location-map iframe{display:block;width:100%;height:300px;border:0;border-radius:8px;background:var(--soft)}@media(max-width:720px){.location-content{grid-template-columns:1fr;gap:24px}}
 
-.publication-tabs + .pub-layout .publication h3{font-size:15px}@media(max-width:720px){.publication-tabs + .pub-layout .publication h3{font-size:14px}}
+.publication-tabs + .pub-layout:not(.patent-layout) .publication h3{font-size:15px}@media(max-width:720px){.publication-tabs + .pub-layout:not(.patent-layout) .publication h3{font-size:14px}}
 
 .profile{margin-bottom:24px}.career-section{padding-top:24px;padding-bottom:24px}.career-section .affiliations{margin-bottom:0}.career-section .affiliations strong{color:#000}
 
