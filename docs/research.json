@@ -27,7 +27,7 @@
     {
       "id": "trustworthy-ai",
       "title": "Trustworthy AI",
-      "description": "We study how AI models can recognize the limits of their predictions and remain reliable when data, acquisition conditions, or application settings change. Our research uses uncertainty estimation to assess model confidence and guide the use of learned information alongside physical knowledge and measured evidence. We aim to develop adaptable AI methods that preserve meaningful structures, reduce unsupported predictions, and support reliable use beyond the training distribution.",
+      "description": "We conduct fundamental research to determine how reliable AI model is in bridging the gap between its prediction and ground truth. We assess model confidence based on uncertainty estimation and control the use of learned information and the measurement knowledge. Our goal is to establish AI model that can maintain meaningful information without hallucination.",
       "tasks": [
         "Uncertainty quantification and reliability evaluation",
         "Anatomical fidelity and hallucination assessment"
