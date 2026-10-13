@@ -8,7 +8,7 @@ def page(filename,title,content,active,sub='',source=None):
     nav=''.join(f'<a href="{url}"'+(' aria-current="page"' if name==active else '')+f'>{name}</a>' for name,url in NAV)
     head='' if filename=='index.html' else f'<div class="page-heading"><h1>{title}</h1>'+ (f'<p>{sub}</p>' if sub else '')+'</div>'
     output=f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>{title} | TMI Lab · Yonsei University</title><meta name="description" content="Translational Medical Intelligence Lab at Yonsei University. Medical imaging, trustworthy AI, computational imaging, and clinical translation."><meta name="theme-color" content="#14319C"><link rel="icon" type="image/svg+xml" href="favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap"><link rel="stylesheet" href="style.css"><script src="publications.js" defer></script><script src="site.js" defer></script></head><body><a class="skip" href="#main">Skip to main content</a><header class="site-header"><div class="wrap header-inner"><a class="brand" href="index.html" aria-label="TMI Lab home"><img src="assets/tmi-logo-intelligence.png" alt="TMI"><span class="university-brand"><img class="university-logo" src="assets/yonsei-wordmark.svg" alt="Yonsei University" width="148" height="44"></span></a><button class="menu-toggle" type="button" aria-label="Open navigation" aria-controls="navigation" aria-expanded="false"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button><nav id="navigation" class="nav" aria-label="Main navigation">{nav}</nav></div></header><main id="main" class="wrap">{head}{content}</main><footer class="site-footer"><div class="wrap"><div class="footer-grid"><div><h3>TMI Lab</h3><p>Translational Medical Intelligence Laboratory<br>Department of Artificial Intelligence · Yonsei University</p><a href="mailto:jongdukbaek@yonsei.ac.kr">jongdukbaek@yonsei.ac.kr</a></div></div><p class="copyright">© 2026 TMI Lab, Yonsei University.</p></div></footer></body></html>'''
-    output=output.replace('href="style.css"','href="style.css?v=20261013-professor-scholar"').replace('src="publications.js"','src="publications.js?v=20261013-journal-links"').replace('src="site.js"','src="site.js?v=20261013-paper-loop"')
+    output=output.replace('href="style.css"','href="style.css?v=20261013-researcher-email"').replace('src="publications.js"','src="publications.js?v=20261013-journal-links"').replace('src="site.js"','src="site.js?v=20261013-paper-loop"')
     if filename == "index.html":
         output = output.replace('<main id="main" class="wrap">', '<main id="main" class="home-main">')
     (OUT/filename).write_text(output,encoding='utf-8')
@@ -112,9 +112,9 @@ page('people.html','Professor',profile,'People',sub='')
 def career_text(text):
     return E(text)
 
-def person(p):
+def person(p, plain_email=False):
     photo=f'<img src="{p["image"]}" alt="{E(p["name"])}" loading="lazy">' if p['image'] else '<div class="portrait-fallback" aria-hidden="true">'+''.join(w[0] for w in p['name'].split())+'</div>'
-    email=''.join(f'<p class="member-email"><a href="mailto:{E(t)}">{E(t)}</a></p>' for t in p['details'] if '@' in t)
+    email=''.join('<p class="member-email">'+(f'<span class="member-email-text">{E(t)}</span>' if plain_email else f'<a href="mailto:{E(t)}">{E(t)}</a>')+'</p>' for t in p['details'] if '@' in t)
     parts=email
     if 'appointment' in p:
         parts+='<p class="member-appointment">'+career_text(p['appointment'])+'</p>'
@@ -143,10 +143,10 @@ for key,title,desc in [('researchers','Researchers',''),('alumni','Alumni','')]:
     if key=='researchers':
         for group in ['Research Associate','Postdoc','Ph.D. Students','M.S./Ph.D. Students','M.S. Students']:
             group_title={'Research Associate':'Research Associates','Postdoc':'Postdocs'}.get(group,group)
-            content+=f'<section class="researcher-group"><h2 class="member-group-title">{E(group_title)}</h2><div class="people-grid">'+''.join(person(p) for p in members if p['group']==group)+'</div></section>'
+            content+=f'<section class="researcher-group"><h2 class="member-group-title">{E(group_title)}</h2><div class="people-grid">'+''.join(person(p, plain_email=True) for p in members if p['group']==group)+'</div></section>'
     else:
         content+='<div class="people-grid">'+''.join(person(p) for p in members)+'</div>'
-    if staff:content+='<h2 class="member-group-title">Staff</h2><div class="people-grid">'+''.join(person(p) for p in staff)+'</div>'
+    if staff:content+='<h2 class="member-group-title">Staff</h2><div class="people-grid">'+''.join(person(p, plain_email=(key=='researchers')) for p in staff)+'</div>'
     page(key+'.html',title,content,'People',sub=desc)
 for key,title,desc in [('journal','Journal',''),('conference','Conference','')]:
     years=list(dict.fromkeys(p['year'] for p in D[key]))
