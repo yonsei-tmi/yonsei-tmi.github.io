@@ -166,3 +166,6 @@ html{scrollbar-gutter:stable}@supports not (scrollbar-gutter:stable){html{overfl
 /* University wordmark in the shared footer. */
 .footer-university-logo{display:block;width:160px;height:auto;align-self:center;flex:none}
 @media(max-width:720px){.footer-university-logo{width:133.333px;align-self:flex-end;margin-top:12px}}
+
+/* Keep the footer at the viewport bottom on short pages. */
+@media screen{body{min-height:100vh;min-height:100dvh;display:flex;flex-direction:column}body>main{flex:1 0 auto}body>.site-header,body>.site-footer{flex-shrink:0}}
