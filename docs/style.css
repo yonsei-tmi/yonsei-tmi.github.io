@@ -157,3 +157,8 @@ html{scrollbar-gutter:stable}@supports not (scrollbar-gutter:stable){html{overfl
 .year-group h2{font-size:25px}
 .publication .venue{font-size:15px}
 .patent-layout .publication h3{font-size:15px}
+
+/* Join Us typography across desktop and mobile. */
+.join-recruitment{font-size:20px}
+.location>h2{font-size:30px}
+.location-info h3{font-size:20px}
