@@ -32,7 +32,7 @@ assert.ok(registrationNews.indexOf(newlyRegistered.title) < registrationNews.ind
 assert.equal((registrationNews.match(/class="news-item"/g)||[]).length, 5);
 console.log('PASS: registration order controls recent news.');
 
-const numbers = [...render.journal(changed).matchAll(/<h3>\[J(\d+)\] /g)].map(m => Number(m[1]));
+const numbers = [...render.journal(changed).matchAll(/<span class="publication-number">\[J(\d+)\]<\/span>/g)].map(m => Number(m[1]));
 assert.deepEqual(numbers, changed.map((_,i)=>changed.length-i));
 console.log("PASS: journal numbering stays continuous across years and additions.");
 
