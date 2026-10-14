@@ -187,3 +187,8 @@ html{scrollbar-gutter:stable}@supports not (scrollbar-gutter:stable){html{overfl
 .publication h3.numbered-publication-title{display:flex;align-items:baseline;gap:.25em}
 .publication-number{flex:none;white-space:nowrap}
 .publication-title-text{min-width:0}
+
+/* Share the title's text column with authors, venues and patent details. */
+.publication:has(>h3.numbered-publication-title){display:grid;grid-template-columns:max-content minmax(0,1fr);column-gap:3.75px}
+.publication h3.numbered-publication-title{display:grid;grid-column:1/-1;grid-template-columns:subgrid;column-gap:inherit;align-items:baseline}
+.publication:has(>h3.numbered-publication-title)>p{grid-column:2}
