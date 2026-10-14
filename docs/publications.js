@@ -14,7 +14,7 @@
     }).map(({paper}) => paper);
   }
   function publication(paper, number = "") {
-    const prefix = number ? "[" + escape(number) + "] " : "";
+    const prefix = number ? '<span class="publication-number">[' + escape(number) + ']</span>' : "";
     let venue = escape(paper.venue);
     for (const label of ["Editor's Choice", 'Oral Presentation']) {
       venue = venue.replaceAll(escape(label), '<span class="publication-distinction">' + escape(label) + '</span>');
@@ -25,7 +25,7 @@
       const url = safeUrl(link.url);
       return url ? '<a href="' + escape(url) + '">' + escape(link.text) + '</a>' : '';
     }).filter(Boolean).join(' ');
-    return '<article class="publication"><h3>' + prefix + title + '</h3><p>' + escape(paper.authors) + '</p><p class="venue">' + venue + '</p>' + (otherLinks ? '<p class="paper-links">' + otherLinks + '</p>' : '') + '</article>';
+    return '<article class="publication"><h3 class="numbered-publication-title">' + prefix + '<span class="publication-title-text">' + title + '</span></h3><p>' + escape(paper.authors) + '</p><p class="venue">' + venue + '</p>' + (otherLinks ? '<p class="paper-links">' + otherLinks + '</p>' : '') + '</article>';
   }
   function news(paper) {
     const date = /^\d{4}-(?:0[1-9]|1[0-2])(?:-\d{2})?$/.test(paper.news_date || '') ? paper.news_date : '';

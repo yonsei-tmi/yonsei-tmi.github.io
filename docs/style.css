@@ -182,3 +182,8 @@ html{scrollbar-gutter:stable}@supports not (scrollbar-gutter:stable){html{overfl
 @media(max-width:720px){.site-footer{padding:24px 0 20px}.footer-grid{display:grid;grid-template-columns:minmax(0,1fr) 104px;align-items:center;gap:12px}.footer-grid p{margin-bottom:0}.footer-university-separator{display:none}.footer-university-name{display:block}.footer-university-logo{width:104px;align-self:center;margin-top:0}.copyright{margin-top:16px;padding-top:14px}}
 
 @media(max-width:720px){.home-main>.hero{padding-left:12px;padding-right:12px}}
+
+/* Align wrapped journal and conference titles after their numbers. */
+.publication h3.numbered-publication-title{display:flex;align-items:baseline;gap:.25em}
+.publication-number{flex:none;white-space:nowrap}
+.publication-title-text{min-width:0}
