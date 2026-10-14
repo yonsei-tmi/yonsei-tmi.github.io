@@ -373,7 +373,7 @@
   "journal": [
     {
       "year": "2026",
-      "title": "Low-Dose CT Denoising Using a Diffusion Prior via Score Distillation Sampling",
+      "title": "Low-dose CT denoising using a diffusion prior via score distillation sampling",
       "authors": "Hojin Jung, Jooho Lee, Jongduk Baek",
       "venue": "Medical Physics, 2026",
       "links": [],
@@ -382,7 +382,7 @@
     },
     {
       "year": "2026",
-      "title": "A Multi-Stage Deep Learning Framework for Half-Detector Truncation and Metal Artifact Reduction in CBCT",
+      "title": "A multi-stage deep learning framework for half-detector truncation and metal artifact reduction in CBCT",
       "authors": "Junhyun Ahn, Jongduk Baek",
       "venue": "Medical Physics, 2026",
       "links": [],
@@ -549,7 +549,7 @@
     },
     {
       "year": "2023",
-      "title": "Deep Learning-based Multimodal Fusion Network for Segmentation and Classification of Breast Cancers using B-mode and Elastography Ultrasound Images",
+      "title": "Deep learning-based multimodal fusion network for segmentation and classification of breast cancers using B-mode and elastography ultrasound images",
       "authors": "Sampa Misra, Chiho Yoon, Kwang-Ju Kim, Ravi Managuli, Richard G. Barr, Jongduk Baek, Chulhong Kim",
       "venue": "Bioengineering and Translational Medicine, 2023",
       "links": [],
@@ -749,7 +749,7 @@
     },
     {
       "year": "2018",
-      "title": "Inter-laboratory comparison of channelized Hotelling observer computation",
+      "title": "Inter-laboratory comparison of channelized hotelling observer computation",
       "authors": "A. Ba, C. K. Abbey, J. Baek, M. Han et al.",
       "venue": "Medical Physics, 2018",
       "links": [],
@@ -813,7 +813,7 @@
     },
     {
       "year": "2016",
-      "title": "Multi-source Inverse-geometry CT Part 1: System Concept and Development",
+      "title": "Multisource inverse-geometry CT. Part I. System concept and development",
       "authors": "B. De Man, J. Uribe, J. Baek, D. Harrison, Z. Yin, R. Longtin, J. Roy, B. Waters, C. Wilson, J. Short, L. Inzinna, J. Reynolds, V. Neculaes, K. Frutschy, B. Senzig, and N. Pelc",
       "venue": "Medical Physics, 2016",
       "links": [],
