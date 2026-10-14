@@ -149,3 +149,6 @@ html{scrollbar-gutter:stable}@supports not (scrollbar-gutter:stable){html{overfl
 
 /* People section tabs on desktop and mobile. */
 .subnav:not(.publication-tabs) a{font-size:25px}
+
+/* Alumni names across desktop and mobile. */
+.person:has(.alumni-degree) h3{font-size:20px}
