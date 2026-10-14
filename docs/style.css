@@ -162,3 +162,7 @@ html{scrollbar-gutter:stable}@supports not (scrollbar-gutter:stable){html{overfl
 .join-recruitment{font-size:20px}
 .location>h2{font-size:30px}
 .location-info h3{font-size:20px}
+
+/* University wordmark in the shared footer. */
+.footer-university-logo{display:block;width:240px;height:auto;align-self:center;flex:none}
+@media(max-width:720px){.footer-university-logo{width:200px;align-self:flex-end;margin-top:12px}}
