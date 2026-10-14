@@ -144,5 +144,8 @@ html{scrollbar-gutter:stable}@supports not (scrollbar-gutter:stable){html{overfl
 
 /* People heading sizes across desktop and mobile. */
 .profile h2{font-size:30px}
-.member-group-title{font-size:30px}
+.member-group-title{font-size:25px}
 .researcher-group .person h3{font-size:20px}
+
+/* People section tabs on desktop and mobile. */
+.subnav:not(.publication-tabs) a{font-size:25px}
