@@ -104,7 +104,10 @@ for n, topic in enumerate(research_data['topics'], 1):
     cards = ''.join(research_paper_card(p) for p in topic['papers'])
     selected = '<h3 class="research-label">Selected Papers</h3><div class="research-paper-list">' + cards + '</div>' if cards else ''
     topic_id = E(topic['id'], quote=True)
-    research += f'<section class="research-topic" id="{topic_id}" aria-labelledby="{topic_id}-title"><div class="research-topic-heading"><span class="research-topic-number">{n:02}</span><span class="research-topic-separator" aria-hidden="true">|</span><h2 id="{topic_id}-title">{E(topic["title"])}</h2></div><p class="research-topic-description">{E(topic["description"])}</p><h3 class="research-label">Research Tasks</h3><ul class="research-task-list">{tasks}</ul>{selected}</section>'
+    description = E(topic['description'])
+    if topic['id'] == 'image-enhancement':
+        description = description.replace('images. Our goal', 'images.<br>Our goal', 1)
+    research += f'<section class="research-topic" id="{topic_id}" aria-labelledby="{topic_id}-title"><div class="research-topic-heading"><span class="research-topic-number">{n:02}</span><span class="research-topic-separator" aria-hidden="true">|</span><h2 id="{topic_id}-title">{E(topic["title"])}</h2></div><p class="research-topic-description">{description}</p><h3 class="research-label">Research Tasks</h3><ul class="research-task-list">{tasks}</ul>{selected}</section>'
 research += '</div>'
 page('research.html', 'Research', research, 'Research')
 bio=D['professor']['bio']
