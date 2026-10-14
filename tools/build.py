@@ -5,10 +5,18 @@ D=json.loads((OUT/'content.json').read_text(encoding='utf-8'))
 E=html.escape
 NAV=[('Home','index.html'),('Research','research.html'),('People','people.html'),('Publications','journal.html'),('Join Us','join.html')]
 def page(filename,title,content,active,sub='',source=None):
-    nav=''.join(f'<a href="{url}"'+(' aria-current="page"' if name==active else '')+f'>{name}</a>' for name,url in NAV)
+    nav_items=[]
+    for name,url in NAV:
+        link=f'<a href="{url}"'+(' aria-current="page"' if name==active else '')+f'>{name}</a>'
+        children=PEOPLE if name=='People' else PUBS if name=='Publications' else None
+        if children:
+            submenu=''.join(f'<a href="{child_url}"'+(' aria-current="page"' if child_url==filename else '')+f'>{child_name}</a>' for child_name,child_url in children)
+            link=f'<div class="nav-group">{link}<div class="nav-dropdown" aria-label="{name} subcategories">{submenu}</div></div>'
+        nav_items.append(link)
+    nav=''.join(nav_items)
     head='' if filename=='index.html' else f'<div class="page-heading"><h1>{title}</h1>'+ (f'<p>{sub}</p>' if sub else '')+'</div>'
     output=f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Yonsei TMI Lab</title><meta name="description" content="Translational Medical Intelligence Lab at Yonsei University. Medical imaging, trustworthy AI, computational imaging, and clinical translation."><meta name="theme-color" content="#14319C"><link rel="icon" type="image/svg+xml" href="favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap"><link rel="stylesheet" href="style.css"><script src="publications.js" defer></script><script src="site.js" defer></script></head><body><a class="skip" href="#main">Skip to main content</a><header class="site-header"><div class="wrap header-inner"><a class="brand" href="index.html" aria-label="TMI Lab home"><img src="assets/tmi-logo-intelligence.png" alt="TMI"></a><button class="menu-toggle" type="button" aria-label="Open navigation" aria-controls="navigation" aria-expanded="false"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button><nav id="navigation" class="nav" aria-label="Main navigation">{nav}</nav></div></header><main id="main" class="wrap">{head}{content}</main><footer class="site-footer"><div class="wrap"><div class="footer-grid"><div><h3>TMI Lab</h3><p>Translational Medical Intelligence Lab<br>Department of Artificial Intelligence<span class="footer-university-separator"> · </span><span class="footer-university-name">Yonsei University</span></p></div><img class="footer-university-logo" src="assets/yonsei-wordmark.svg" alt="Yonsei University" width="160" height="48"></div><p class="copyright">© 2026 TMI Lab, Yonsei University.</p></div></footer></body></html>'''
-    output=output.replace('href="style.css"','href="style.css?v=20261014-publication-details"').replace('src="publications.js"','src="publications.js?v=20261014-publication-details"').replace('src="site.js"','src="site.js?v=20261013-paper-loop"')
+    output=output.replace('href="style.css"','href="style.css?v=20261014-nav-dropdown"').replace('src="publications.js"','src="publications.js?v=20261014-publication-details"').replace('src="site.js"','src="site.js?v=20261013-paper-loop"')
     if filename == "index.html":
         output = output.replace('<main id="main" class="wrap">', '<main id="main" class="home-main">')
     (OUT/filename).write_text(output,encoding='utf-8')
