@@ -171,3 +171,6 @@ html{scrollbar-gutter:stable}@supports not (scrollbar-gutter:stable){html{overfl
 @media screen{body{min-height:100vh;min-height:100dvh;display:flex;flex-direction:column}body>main{flex:1 0 auto}body>.site-header,body>.site-footer{flex-shrink:0}}
 
 .join-contact{display:block;margin-top:38px}
+
+/* Fit the introductory welcome sentence on one desktop line. */
+@media(min-width:1001px){.home-main>.intro{grid-template-columns:minmax(0,690px) minmax(0,1fr);gap:55px}}
