@@ -174,3 +174,6 @@ html{scrollbar-gutter:stable}@supports not (scrollbar-gutter:stable){html{overfl
 
 /* Fit the introductory welcome sentence on one desktop line. */
 @media(min-width:1001px){.home-main>.intro{grid-template-columns:minmax(0,690px) minmax(0,1fr);gap:55px}}
+
+/* Keep the complete lab title on one line on mobile screens. */
+@media(max-width:720px){.home-main>.hero h1{font-size:min(31px,4.6vw);letter-spacing:-.025em;white-space:nowrap;line-height:1.3}}
