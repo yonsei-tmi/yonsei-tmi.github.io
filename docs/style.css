@@ -141,3 +141,8 @@ html{scrollbar-gutter:stable}@supports not (scrollbar-gutter:stable){html{overfl
 /* Selected Papers matches Latest Papers at every screen width. */
 .research-topics .research-paper-venue{font-size:15px}
 .research-topics .research-paper-info h4{font-size:15px}
+
+/* People heading sizes across desktop and mobile. */
+.profile h2{font-size:30px}
+.researcher-group .member-group-title{font-size:30px}
+.researcher-group .person h3{font-size:20px}
