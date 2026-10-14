@@ -192,3 +192,11 @@ html{scrollbar-gutter:stable}@supports not (scrollbar-gutter:stable){html{overfl
 .publication:has(>h3.numbered-publication-title){display:grid;grid-template-columns:max-content minmax(0,1fr);column-gap:3.75px}
 .publication h3.numbered-publication-title{display:grid;grid-column:1/-1;grid-template-columns:subgrid;column-gap:inherit;align-items:baseline}
 .publication:has(>h3.numbered-publication-title)>p{grid-column:2}
+
+/* Hover or keyboard focus reveals section links without changing parent destinations. */
+.nav-group{position:relative;align-self:stretch;display:flex;align-items:center}
+.nav-dropdown{position:absolute;top:100%;left:50%;transform:translateX(-50%);display:flex;gap:20px;padding:10px 20px;background:#fff;border:1px solid var(--line);border-radius:0 0 8px 8px;box-shadow:0 6px 18px #00000012;white-space:nowrap;visibility:hidden;opacity:0;pointer-events:none;z-index:20}
+.nav-group:hover>.nav-dropdown,.nav-group:focus-within>.nav-dropdown{visibility:visible;opacity:1;pointer-events:auto}
+.nav .nav-dropdown a{padding:8px 0;border-bottom:2px solid transparent;font-size:14px}
+.nav .nav-dropdown a:hover,.nav .nav-dropdown a:focus-visible,.nav .nav-dropdown a[aria-current=page]{color:var(--accent);border-bottom-color:var(--accent)}
+@media(max-width:720px){.nav-group{display:block}.nav-group>a{display:block}.nav-dropdown{position:static;transform:none;visibility:visible;opacity:1;pointer-events:auto;box-shadow:none;border:0;border-radius:0;padding:0 0 8px 14px;gap:20px;flex-wrap:wrap}.nav .nav-dropdown a{font-size:14px;padding:6px 0}}
