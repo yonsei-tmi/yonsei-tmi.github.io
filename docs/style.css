@@ -152,3 +152,8 @@ html{scrollbar-gutter:stable}@supports not (scrollbar-gutter:stable){html{overfl
 
 /* Alumni names across desktop and mobile. */
 .person:has(.alumni-degree) h3{font-size:20px}
+
+/* Publication years and venue details across screen widths. */
+.year-group h2{font-size:25px}
+.publication .venue{font-size:15px}
+.patent-layout .publication h3{font-size:15px}
