@@ -1587,6 +1587,13 @@
   "patents": [
     {
       "year": "",
+      "title": "LDCT denoising neural network based on SGM(score-based generative model) apparatus and method",
+      "authors": "Hojin Jung and Jongduk Baek",
+      "venue": "US Patent 12737856, issued Sep 15, 2026",
+      "links": []
+    },
+    {
+      "year": "",
       "title": "암시적 신경 표현 기반의 컴퓨터 단층촬영 영상 금속 인공음영 제거 장치 및 방법",
       "authors": "Jooho Lee and Jongduk Baek",
       "venue": "Korea Patent 10-2926116, issued Feb 6, 2026",
