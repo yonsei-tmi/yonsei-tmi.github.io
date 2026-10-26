@@ -48,8 +48,8 @@ console.log('PASS: custom linked announcements merge with journals within the fi
 assert.match(render.news(fixture), /<a(?: class="news-paper-link")? href="https:\/\/example\.org\/paper" target="_blank" rel="noopener noreferrer"><strong>New paper &lt;test&gt;<\/strong><\/a>/);
 assert.ok(!render.news({...fixture, url: 'javascript:alert(1)'}).includes('href='));
 assert.ok(!render.news({...fixture, url: undefined}).includes('href='));
-assert.ok(!render.news({...fixture, title: 'Low-Dose CT Denoising Using a Diffusion Prior via Score Distillation Sampling'}).includes('href='));
-console.log('PASS: news titles link safely, preserving the specified exclusion.');
+assert.ok(render.news(papers[0]).includes(papers[0].url));
+console.log('PASS: news titles link safely, including the newly linked diffusion paper.');
 
 assert.ok(render.publication(fixture).includes('>New paper &lt;test&gt;</a>'));
 assert.ok(!render.publication(fixture).includes('<span>Link</span>'));
