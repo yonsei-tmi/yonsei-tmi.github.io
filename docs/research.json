@@ -13,14 +13,15 @@
       "papers": [
         {
           "source_kind": "journal",
-          "source_title": "A Multi-Stage Deep Learning Framework for Half-Detector Truncation and Metal Artifact Reduction in CBCT",
+          "source_title": "Low-dose CT denoising using a diffusion prior via score distillation sampling",
           "tags": [
-            "CBCT",
-            "Metal & truncation artifacts",
-            "Dual-domain learning"
+            "Diffusion prior",
+            "Image denoising",
+            "LDCT",
+            "Score distillation sampling"
           ],
-          "image": "assets/selected_image_enhancement.png",
-          "source_url": "https://doi.org/10.1002/mp.70604"
+          "image": "assets/selected-jung-sds-2026.png",
+          "source_url": "https://aapm.onlinelibrary.wiley.com/doi/10.1002/mp.70707"
         }
       ]
     },
