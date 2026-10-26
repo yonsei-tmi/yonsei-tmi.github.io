@@ -200,3 +200,6 @@ html{scrollbar-gutter:stable}@supports not (scrollbar-gutter:stable){html{overfl
 .nav .nav-dropdown a{padding:8px 0;border-bottom:2px solid transparent;font-size:14px}
 .nav .nav-dropdown a:hover,.nav .nav-dropdown a:focus-visible,.nav .nav-dropdown a[aria-current=page]{color:var(--accent);border-bottom-color:var(--accent)}
 @media(max-width:720px){.nav-group{display:block}.nav-group>a{display:block}.nav-dropdown{position:static;transform:none;visibility:visible;opacity:1;pointer-events:auto;box-shadow:none;border:0;border-radius:0;padding:0 0 8px 14px;gap:20px;flex-wrap:wrap}.nav .nav-dropdown a{font-size:14px;padding:6px 0}}
+
+/* Continuous link underlines, including nested bold text and descenders. */
+a,a *{text-decoration-skip-ink:none}
