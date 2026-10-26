@@ -45,7 +45,7 @@
     const venue = paper.journal_name || paper.venue.split(',')[0];
     let title = '<strong>' + escape(paper.title) + '</strong>';
     const url = safeUrl(paper.url);
-    if (url && paper.title !== 'Low-Dose CT Denoising Using a Diffusion Prior via Score Distillation Sampling') {
+    if (url) {
       title = '<a class="news-paper-link" href="' + escape(url) + '" target="_blank" rel="noopener noreferrer">' + title + '</a>';
     }
     return '<article class="news-item"><div class="news-date">' + dateMarkup + '</div><p>The paper &quot;' + title + '&quot; is accepted to <strong>' + escape(venue) + '</strong>.</p></article>';
