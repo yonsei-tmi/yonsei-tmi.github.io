@@ -1588,6 +1588,13 @@
   "patents": [
     {
       "year": "",
+      "title": "Apparatus and method for neural network training of dental images through patient-specific data augmentation",
+      "authors": "Junhyun Ahn and Jongduk Baek",
+      "venue": "US Patent 12802435, issued Nov 17, 2026",
+      "links": []
+    },
+    {
+      "year": "",
       "title": "LDCT denoising neural network based on SGM(score-based generative model) apparatus and method",
       "authors": "Hojin Jung and Jongduk Baek",
       "venue": "US Patent 12737856, issued Sep 15, 2026",
